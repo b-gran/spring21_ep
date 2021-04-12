@@ -1,0 +1,8 @@
+#!/bin/sh
+
+git ls-files patches | while read -r f
+do
+  base_name=`basename -- "$f"`
+  
+  cp patches/"$base_name" "$HOME"/Music/Vital/User/Presets/"$base_name"
+done

@@ -1,0 +1,13 @@
+#!/bin/sh
+
+git ls-files patches | while read -r f
+do
+  # echo $f
+  # hash=`md5 -q "$f"`
+  # echo hash is $hash
+  base_name=`basename -- "$f"`
+  # echo base name is "$base_name"
+  
+  # ls "$HOME"/Music/Vital/User/Presets/"$base_name"
+  cp "$HOME"/Music/Vital/User/Presets/"$base_name" patches/"$base_name"
+done
